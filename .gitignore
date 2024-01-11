@@ -18,3 +18,7 @@ otel-cli
 dist/
 
 *.pem
+
+# nix specific
+.direnv/
+result
