@@ -1,3 +1,31 @@
+## [0.4.4] - 2024-03-11
+
+Fix a typo in the `OTEL_CLI_EXEC_TP_DISABLE_INJECT` envvar.
+
+### Changed
+
+- spell `DISALBE` correctly in `OTEL_CLI_EXEC_TP_DISABLE_INJECT`
+- adds a test for that
+
+## [0.4.3] - 2024-03-11
+
+Add injection of `{{traceparent}}` to `otel-cli exec` as default behavior, along with
+the `otel-cli exec --tp-disable-inject` to turn it off (old behavior).
+
+### Added
+
+- `otel-cli exec echo {{traceparent}}` is now supported to pass traceparent to child process
+- `otel-cli exec --tp-disable-inject` will disable this new default behavior
+
+## [0.4.2] - 2023-12-01
+
+The Docker container now builds off `alpine:latest` instead of `scratch`. This
+makes the default certificate store included with Alpine available to otel-cli.
+
+### Changed
+
+- switch release Dockerfile to base off alpine:latest
+
 ## [0.4.1] - 2023-10-16
 
 Mostly small but impactful changes to `otel-cli exec`.
